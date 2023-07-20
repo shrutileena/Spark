@@ -13,5 +13,5 @@ object LogLevelGrouping extends App {
   baseRdd.map(x => {
     (x.split(":")(0), x.split(":")(1))
   }).groupByKey.map(x => (x._1, x._2.size)).collect().foreach(println)
-  
+//  baseRdd.collect().foreach(println)
 }

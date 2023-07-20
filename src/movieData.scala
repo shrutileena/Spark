@@ -15,7 +15,6 @@ object movieData extends App {
   
   val ratingTotalCount = splittedInput.reduceByKey((x,y) => x+y).sortBy(x=>x._1, false)
 //  val ratingTotalCount = splittedInput.countByValue()
-  
   ratingTotalCount.collect.foreach(println)
   
   scala.io.StdIn.readLine()
